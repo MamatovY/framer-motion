@@ -1,6 +1,10 @@
 export const data = [
     {
         category: 'cars',
+        title: 'MERS'
+    },
+    {
+        category: 'cars',
         title: 'BMW'
     },
     {

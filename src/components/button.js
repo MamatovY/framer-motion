@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-const Button = ({ text, handleClick }) => {
+const Button = ({ text, handleClick, isSelected }) => {
 
     return (
         <motion.button
@@ -9,8 +9,15 @@ const Button = ({ text, handleClick }) => {
             whileHover={{ background: '#DDD' }}
             whileTap={{ background: '#CCC' }}
         >
-            {text}
-        </motion.button>
+            {isSelected && <BgSelector />}
+            <motion.span animate={{ color: isSelected ? '#FFF' : '#000' }}
+                style={{
+                    position: 'relative'
+                }}
+            >
+                {text}
+            </motion.span>
+        </motion.button >
     )
 }
 
@@ -20,7 +27,21 @@ const btnStyle = {
     border: 'none',
     outline: 'none',
     padding: '12px 16px',
-    background: '#f1f1f1',
+    background: 'transparent',
     cursor: 'pointer',
-    width: '80px'
+    width: '80px',
+    position: 'relative'
+}
+
+const BgSelector = () => {
+    return (
+        <motion.div layoutId="activeMenuItem" style={{
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            background: 'rgb(290,0,0)'
+        }} />
+    )
 }

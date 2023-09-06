@@ -3,7 +3,7 @@ import { useState } from "react"
 import Button from "./button"
 
 const Filter = ({ data }) => {
-    const [cards, setCards] = useState(data.filter(el => el.category === 'cars'))
+    const [cards, setCards] = useState(data)
     const [selected, setSelected] = useState(0)
 
     const buttons = data.reduce((acc, el) => {

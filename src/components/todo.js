@@ -18,17 +18,17 @@ const variants = {
 
 const Todo = () => {
     const [data, setData] = useState([
-        'Yiman',
-        'Amir',
-        'Riza',
+        { name: 'Yiman', id: 1 },
+        { name: 'Riza', id: 2 },
+        { name: 'Amir', id: 3 },
     ])
     const handleAdd = (name) => {
-        const newData = [...data, name]
+        const newData = [...data, { name, id: Date.now() }]
         setData(newData)
     }
 
-    const handleDelete = (name) => {
-        const newData = data.filter(item => item !== name)
+    const handleDelete = (id) => {
+        const newData = data.filter(item => item.id !== id)
         setData(newData)
     }
     return (
@@ -37,11 +37,10 @@ const Todo = () => {
             <Reorder.Group axis="y" values={data} onReorder={setData}>
                 {data.map((item, i) => {
                     return (
-                        <Item handleDelete={handleDelete} key={item} item={item} />
+                        <Item handleDelete={handleDelete} key={item.id} item={item} />
                     )
                 })}
             </Reorder.Group>
-
         </div>
     )
 }
@@ -65,14 +64,14 @@ const Item = ({ item, handleDelete }) => {
                 scale: 1.1,
                 boxShadow: '0px 5px 10px 2px rgba(34, 60, 80, 0.6)'
             }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 0.5 }}
             value={item}
             style={{
                 borderRadius: '6px',
                 background: 'rgb(36,200,130)'
             }}>
-            {item}
-            <span style={{ cursor: 'pointer' }} onClick={() => handleDelete(item)}>X</span>
+            {item.name}
+            <span style={{ cursor: 'pointer' }} onClick={() => handleDelete(item.id)}>X</span>
         </Reorder.Item>
     )
 }

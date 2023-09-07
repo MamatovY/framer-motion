@@ -3,14 +3,16 @@ import LayoutId from "./components/layoutId";
 import HideVisible from "./components/hideVisible";
 import SimpleAnimate from "./components/simpleAnimate";
 import Viewport from "./components/viewport";
+import Todo from "./components/todo";
 
 function App() {
   return (
     <div className="App">
-      <SimpleAnimate />
+      <Todo />
+      {/* <SimpleAnimate />
       <LayoutId />
       <HideVisible />
-      <Viewport />
+      <Viewport /> */}
     </div>
   );
 }

@@ -34,7 +34,7 @@ const Todo = () => {
     return (
         <div style={{ marginBottom: '50px' }}>
             <CreateItem handleAdd={handleAdd} />
-            <Reorder.Group axis="y" values={data} onReorder={setData}>
+            <Reorder.Group axis="y" className="todo-ul" values={data} onReorder={setData}>
                 {data.map((item, i) => {
                     return (
                         <Item handleDelete={handleDelete} key={item.id} item={item} />
@@ -49,6 +49,7 @@ const Item = ({ item, handleDelete }) => {
 
     return (
         <Reorder.Item
+            className="todo-li"
             initial={{
                 opacity: 0,
                 x: -100

@@ -13,13 +13,13 @@ li {
     font-size: 24px;
 }
 
-ul {
+.todo-ul {
     position: relative;
     width: 300px;
     margin: 0 auto;
 }
 
-li {
+.todo-li {
     border-radius: 10px;
     margin-bottom: 10px;
     width: 100%;

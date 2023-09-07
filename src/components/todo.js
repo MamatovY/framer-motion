@@ -1,21 +1,6 @@
 import { useState } from "react"
 import { Reorder } from 'framer-motion'
 
-const variants = {
-    initial: {
-        opacity: 0,
-        x: -100
-    },
-    animate: {
-        opacity: 1,
-        x: 0
-    },
-    exit: {
-        x: -100,
-        opacity: 0
-    }
-}
-
 const Todo = () => {
     const [data, setData] = useState([
         { name: 'Yiman', id: 1 },

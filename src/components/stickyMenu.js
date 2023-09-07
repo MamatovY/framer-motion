@@ -2,7 +2,7 @@
 const StickyMenu = () => {
     return (
         <div className='stickyMenu'>
-            Menu
+            stickyMenu
         </div>
     )
 }

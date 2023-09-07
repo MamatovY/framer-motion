@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <Todo />
-      {/* <SimpleAnimate />
+      <SimpleAnimate />
       <LayoutId />
       <HideVisible />
-      <Viewport /> */}
+      <Viewport />
     </div>
   );
 }

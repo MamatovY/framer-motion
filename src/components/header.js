@@ -15,7 +15,7 @@ const Header = () => {
         >
             <div className="flex">
                 <motion.img
-                    src="https://octocourses.com/static/7bcadc9ec2ba0513c32383ea8ff863c7/630fb/framer-motion.png"
+                    src="https://cdn.worldvectorlogo.com/logos/framer-motion.svg"
                     style={{
                         width: imgWidth,
                     }}

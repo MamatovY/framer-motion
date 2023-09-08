@@ -2,8 +2,11 @@ import React from 'react';
 import { motion, useTransform } from 'framer-motion';
 
 const Header = ({ offsetY, scrollY }) => {
-    const height = 250;
-    const imgWidth = 100;
+    const heightSizes = [250, 50]
+    const imageSizes = [100, 35]
+
+    const height = useTransform(scrollY, offsetY, heightSizes);
+    const imgWidth = useTransform(scrollY, offsetY, imageSizes);
     const fontSize = '40px';
 
     return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, useTransform } from 'framer-motion';
 
-const Header = () => {
+const Header = ({ offsetY, scrollY }) => {
     const height = 250;
     const imgWidth = 100;
     const fontSize = '40px';

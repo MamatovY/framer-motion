@@ -3,10 +3,15 @@ import '../App.css';
 import Header from './header';
 
 const StickyMenu = () => {
+    const { scrollY } = useScroll()
+
+
+    const offsetY = [0, 300]
+
 
     return (
         <div style={{ position: 'relative' }}>
-            <Header />
+            <Header offsetY={offsetY} scrollY={scrollY} />
             <div
                 className="section"
                 style={{ backgroundColor: 'maroon' }}>
